@@ -15,7 +15,7 @@ const UserPage = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/post")
+    fetch("https://blog-backend-3bya.onrender.com/post")
       .then((response) => response.json())
       .then((data) => {
         setPosts(data.posts);
@@ -28,7 +28,7 @@ const UserPage = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/user/${id}`, {
+        const response = await fetch(`https://blog-backend-3bya.onrender.com/user/${id}`, {
           method: 'GET',
           credentials: 'include',
         });

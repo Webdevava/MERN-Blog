@@ -29,7 +29,7 @@ const PostPage = () => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/post/${id}`, {
+      const response = await fetch(`https://blog-backend-3bya.onrender.com/post/${id}`, {
         method: "DELETE",
         credentials: "include",
       });

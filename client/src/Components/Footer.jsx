@@ -16,16 +16,16 @@ const Footer = () => {
         <img src={logo} alt="" />
       </div>
       <main>
-        <div className="links">
+{ /*       <div className="links">
           <Link to="/">Home</Link>
           <Link to="/">Tech</Link>
           <Link to="/">Gaming</Link>
           <Link to="/">News</Link>
-        </div>
+  </div>*/}
         <div className="socials">
-          <FiLinkedin />
-          <FiGithub />
-          <FiInstagram />
+          <a href="https://github.com/Webdevava"><FiGithub /></a>
+          <a href="https://www.linkedin.com/in/ankur-auti-862953250/"><FiLinkedin /></a>
+          <a href="https://www.instagram.com/ankurauti382/"><FiInstagram /></a>
         </div>
       </main>
       <div className="copyright">

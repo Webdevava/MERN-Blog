@@ -41,7 +41,7 @@ const Postcard = ({
         ) : (
           cover && (
             <img
-              src={`http://localhost:3000/${cover}`}
+              src={`https://blog-backend-3bya.onrender.com/${cover}`}
               alt=""
               className="postcard__image"
             />

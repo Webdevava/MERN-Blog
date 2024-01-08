@@ -18,7 +18,7 @@ const EditPost = () => {
   const [redirect, setredirect] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3000/post/'+id)
+    fetch('https://blog-backend-3bya.onrender.com/post/'+id)
       .then(response => {
         response.json().then(postInfo => {
           setTitle(postInfo.title);
@@ -47,7 +47,7 @@ const EditPost = () => {
       data.set("coverLink", coverLink);
     }
 
-    const response = await fetch(`http://localhost:3000/post`, {
+    const response = await fetch(`https://blog-backend-3bya.onrender.com/post`, {
         method: "PUT",
         body: data,
         credentials: 'include'

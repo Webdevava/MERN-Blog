@@ -10,7 +10,7 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/post")
+    fetch("https://blog-backend-3bya.onrender.com/post")
       .then((response) => response.json())
       .then((data) => {
         setPosts(data.posts);
@@ -40,7 +40,7 @@ const Home = () => {
               />
             ))
           ) : (
-            <p className="noContent">No Content Here</p>
+            <p className="noContent">Loading...</p>
           )}
         </div>
     </div>

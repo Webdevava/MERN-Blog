@@ -17,7 +17,7 @@ const Navbar = () => {
   const currentRoute = location.pathname;
 
   useEffect(() => {
-    fetch("http://localhost:3000/profile", {
+    fetch("https://blog-backend-3bya.onrender.com/profile", {
       credentials: "include",
     })
       .then((response) => {
