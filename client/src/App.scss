@@ -1,0 +1,20 @@
+@import './Styles/Default.scss';
+
+
+
+
+.app{
+  // height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+transition: $tran;
+
+.space{
+  height: 60px;
+}
+
+  &.dark{
+    background-color: $black;
+  }
+}

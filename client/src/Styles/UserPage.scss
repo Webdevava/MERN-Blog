@@ -1,0 +1,90 @@
+@import "./Default.scss";
+
+.userpage {
+  min-height: 100vh;
+  button {
+    border: none;
+    background-color: $primary;
+    padding: 10px;
+    color: $white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border-radius: 6px;
+  }
+  .userPosts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 60px 0;
+    padding: 50px;
+  }
+
+  &.dark {
+    color: $white;
+  }
+}
+
+.confirmation-popup {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #33333383;
+  padding: 20px;
+  // border-radius: 8px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+
+  &.show {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .popup-content {
+    // display: none;
+    text-align: center;
+    background-color: $primary;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    // border: 2px solid $black;
+    animation: bounceIn 0.3s ease-in;
+
+    
+    .logoutActions {
+      .logoutBtn,
+      .cancelBtn {
+        background-color: $red;
+        color: $black2;
+        font-weight: 600;
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        // border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($red, 20%);
+        }
+      }
+      .cancelBtn {
+        background-color: $green;
+        &:hover {
+          background-color: darken($green, 20%);
+        }
+      }
+    }
+  }
+}

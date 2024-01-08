@@ -1,0 +1,152 @@
+@import "./Default.scss";
+
+.posts {
+  // margin:20px 50px;
+  min-height: 100vh;
+
+
+  &.dark {
+    .postFilterNav {
+        .filterSection {
+          .filterBtn {
+            color: $white;
+          }
+          .filters {
+            background-color: $black2;
+
+            button,select {
+              border: 2px solid $white;
+              color: $white;
+              background-color: $black;
+              &:hover{
+                background-color: $primary;
+
+              }
+            }
+          }
+        }
+    
+        input[type="text"] {
+          border: 2px solid $white;
+          background-color: $black2;
+          color: $white;
+        }
+        .removeFltrBtn{
+            display: flex;align-items: center;gap: 10px;
+            span{
+                font-size: 30px;
+                color: $white;
+            }
+            background-color: $primary;
+            padding: 0px 10px;
+            font-size: 18px;
+            border: none;
+            color: $white;
+            height: 50px;
+        width: fit-content;
+        cursor: pointer;
+        &:hover{
+            background-color: lighten($primary, 5);
+        }
+        }
+      }
+    
+      .noContent {
+        color: $white;
+      }
+  }
+
+  .postFilterNav {
+    display: flex;
+    //  background-color:$primary;
+    flex-direction: column;
+    gap: 10px;
+    // margin: 50px auto;
+    padding: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    .filterSection {
+        display: flex;
+        flex-wrap: wrap;
+      .filterBtn {
+        background-color: $primary;
+        color: $black2;
+        border: none;
+        padding: 10px;
+        height: 50px;
+        font-size: 30px;
+      border-radius: .75rem;
+      cursor: pointer;
+        &:hover{
+            background-color: lighten($primary, 5);
+        }
+      }
+
+      .filters {
+      border-radius: .75rem;
+      border: 2px solid $primary;
+        background-color: $white2;
+        display: flex;
+        flex-direction: row;
+        // width: fit-content;
+        padding: 10px;
+        gap: 5px;
+
+        button,select {
+          font-size: 18px;
+          border: 2px solid $black;
+      border-radius: .75rem;
+      padding:0 4px;
+          cursor: pointer;
+          &:hover{
+            background-color: $primary;
+          }
+        }
+      }
+    }
+
+    input[type="text"] {
+      padding: 14px 10px;
+      font-size: 18px;
+      border-radius: .75rem;
+          height: 50px;
+          border: 2px solid $black;
+    //   width: 100%;
+      &:focus {
+        border: 2px solid $primary;
+        outline: none;
+      }
+    }
+    .removeFltrBtn{
+      border-radius: .75rem;
+      display: flex;align-items: center;gap: 10px;
+        span{
+            font-size: 30px;
+        }
+        background-color: $primary;
+        padding: 0px 10px;
+        font-size: 18px;
+        border: none;
+        color: $black;
+        height: 50px;
+    width: fit-content;
+    cursor: pointer;
+    &:hover{
+        background-color: lighten($primary, 5);
+    }
+    }
+  }
+
+  .noContent {
+    color: $black;
+  }
+  .allPosts {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px 150px;
+  }
+}
+
+// Additional styles for your Postcard component can be added here

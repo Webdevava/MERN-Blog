@@ -1,0 +1,95 @@
+@import './Default.scss';
+
+.createPost{
+    min-height: 100vh;
+    padding: 20px;
+    h1{
+        color: $black2;
+        font-size: 3rem;
+        margin: 10px 0;
+    }
+    
+    form{
+        padding: 20px;
+        margin-top: 50px;
+        display: flex;flex-direction: column;
+        gap: 20px;
+
+        input,label,select,textarea{
+            font-size: 18px;
+            border: 1px solid $black2;
+            padding: 10px;
+            background-color: $white2;
+        }
+        select{
+            width: fit-content;
+        }
+
+
+        #file{
+            display: none;
+        }
+        label{
+            // padding: 0;
+            display: flex;
+            width: fit-content;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            span{
+                display: flex;
+                flex-direction: column; 
+                // justify-content: center;
+                align-items: center;
+                gap: 10px;
+                .filename{
+                    background-color: $primary;
+                    font-size: 20px;
+                }
+            }
+        }
+        .quill{
+            border: 1px solid $black2;
+            background-color: $white2;
+        }
+        button{
+            font-size: 20px;
+            width: fit-content;
+            border: none;
+            padding: 10px;
+            background-color: $blue;
+            cursor: pointer;
+            color: $white2;
+
+        }
+    }
+
+    &.dark{
+        h1{
+            color: $white2;
+        }
+        form{
+            input,textarea{
+                background-color: $black2;
+            border: 1px solid $white2;
+            color: $white2;
+            }
+            select,label{
+             background-color: $black2;
+             border: 1px solid $white2;
+                span{
+                  color: $white2;
+                }
+            }
+            select{
+                color: $white;
+
+            }
+            .quill{
+                background-color: $black2;
+                color: $white2;
+
+            }
+        }
+    }
+}

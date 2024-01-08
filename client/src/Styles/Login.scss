@@ -1,0 +1,144 @@
+@import "./Default.scss";
+
+.login {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // background-color: $white;
+  margin: 150px 0;
+  // border: 2px solid $green;
+
+  &.dark {
+    // background-color: $black;
+    .log_form {
+      background-color: $black2;
+      h1 {
+        color: $white;
+      }
+      .passwordContainer {
+        span {
+          color: $white;
+        }
+      }
+      input {
+        color: $white;
+        border-bottom: 1px solid $white;
+      }
+      .form_footer {
+        p {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .log_form {
+    display: flex;
+    border: 2px solid $primary;
+
+    flex-direction: column;
+    background-color: $white2;
+    box-shadow: $shadow2;
+    padding: 20px;
+    gap: 30px;
+    animation: shadows 5s ease-in-out infinite;
+
+    h1 {
+      color: $black;
+    }
+    .passwordContainer {
+      display: flex;
+      align-items: center;
+      justify-content: baseline;
+
+      span {
+        font-size: 25px;
+        color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+      }
+    }
+    input {
+      margin: 10px;
+      color: $black;
+      border: none;
+      border-bottom: 1px solid $black;
+      padding: 5px;
+      background: transparent;
+      font-size: 20px;
+      transition: $tran;
+
+      &:focus {
+        outline: none;
+
+        border-bottom: 2px solid $green;
+      }
+    }
+
+    button {
+      border: none;
+      outline: none;
+      background-color: $primary;
+      padding: 10px;
+      font-size: 18px;
+      color: $white;
+      cursor: pointer;
+      transition: $tran;
+
+      &:active {
+        background-color: $green;
+      }
+    }
+
+    .form_footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+      color: $black;
+      width: 100%;
+      // border-top: 1px solid $white;
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@keyframes shadows {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  10%,
+  90% {
+    box-shadow: rgba($primary, 0.4) 5px 5px;
+  }
+  20%,
+  80% {
+    box-shadow: rgba($primary, 0.4) 5px 5px, rgba($primary, 0.3) 10px 10px;
+  }
+  30%,
+  70% {
+    box-shadow: rgba($primary, 0.4) 5px 5px, rgba($primary, 0.3) 10px 10px,
+      rgba($primary, 0.2) 15px 15px;
+  }
+  40%,
+  60% {
+    box-shadow: rgba($primary, 0.4) 5px 5px, rgba($primary, 0.3) 10px 10px,
+      rgba($primary, 0.2) 15px 15px, rgba($primary, 0.1) 20px 20px;
+  }
+  50% {
+    box-shadow: rgba($primary, 0.4) 5px 5px, rgba($primary, 0.3) 10px 10px,
+      rgba($primary, 0.2) 15px 15px, rgba($primary, 0.1) 20px 20px,
+      rgba($primary, 0.05) 25px 25px;
+  }
+}

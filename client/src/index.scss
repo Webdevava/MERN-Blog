@@ -1,0 +1,37 @@
+@import './Styles//Default.scss';
+@font-face {
+  font-family: 'letter';
+  src: url('./Assets/LetteraMonoLLCondLight-Regular.otf');
+}
+@font-face {
+  font-family: 'inter';
+  src: url('./Assets/Inter-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,body{
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+  background-color:$white2;
+  font-family: 'letter';
+
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+li{
+  list-style: none;
+}
+h1{
+  font-family: inter;
+}
