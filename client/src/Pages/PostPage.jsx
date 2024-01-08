@@ -16,7 +16,7 @@ const PostPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/post/${id}`)
+    fetch(`https://blog-backend-3bya.onrender.com/post/${id}`)
       .then((response) => response.json())
       .then((postInfo) => {
         setPostInfo(postInfo);
