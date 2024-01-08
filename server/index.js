@@ -16,7 +16,7 @@ const salt = bcrypt.genSaltSync(10);
 const secret = "yourSecretKey"; // Replace with your secret key
 
 // Middleware setup
-app.use(cors({ credentials: true, origin: "http://localhost:5174" }));
+app.use(cors({ credentials: true, origin: "https://avablogs.vercel.app/" }));
 
 app.use(express.json());
 app.use(cookieParser());
