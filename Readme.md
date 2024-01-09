@@ -1,0 +1,1 @@
+blog made with MERN stack backend hosted on render and frontend on vercel 
