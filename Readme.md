@@ -4,7 +4,10 @@ MERN-Blog is a full-stack web application developed using the MERN (MongoDB, Exp
 
 ## Repository
 
-🔗 [MERN-Blog GitHub Repository](https://github.com/Webdevava/MERN-Blog.git)
+🔗 Clone GitHub Repository
+```
+git clone https://github.com/Webdevava/MERN-Blog.git
+```
 
 ## Live Demo
 
