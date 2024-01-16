@@ -41,21 +41,51 @@ app.post("/register", async (req, res) => {
 });
 
 // Login endpoint
+// app.post("/login", async (req, res) => {
+//   const { username, password } = req.body;
+
+//   const userDoc = await User.findOne({ username });
+//   const passOk = bcrypt.compareSync(password, userDoc.password);
+//   if (passOk) {
+//     //login
+//     jwt.sign({ username, id: userDoc._id }, secret, {}, (err, token) => {
+//       if (err) throw err;
+//       res.cookie("token", token).json("ok");
+//     });
+//   } else {
+//     res.status(400).json("wrong credentials");
+//   }
+// });
+
 app.post("/login", async (req, res) => {
+  console.log("Login request received:", req.body);
+
   const { username, password } = req.body;
 
   const userDoc = await User.findOne({ username });
+
+  if (!userDoc) {
+    console.log("User not found");
+    return res.status(400).json("User not found");
+  }
+
   const passOk = bcrypt.compareSync(password, userDoc.password);
+
   if (passOk) {
-    //login
     jwt.sign({ username, id: userDoc._id }, secret, {}, (err, token) => {
-      if (err) throw err;
+      if (err) {
+        console.error("Error generating JWT token:", err);
+        return res.status(500).json({ error: "Internal Server Error" });
+      }
+      console.log("Login successful");
       res.cookie("token", token).json("ok");
     });
   } else {
-    res.status(400).json("wrong credentials");
+    console.log("Wrong credentials");
+    res.status(400).json("Wrong credentials");
   }
 });
+
 
 // Logout endpoint
 app.post("/logout", (req, res) => {
