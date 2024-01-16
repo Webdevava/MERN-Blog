@@ -34,8 +34,8 @@ const Login = () => {
 
   if (redirect) {
     navigate("/");
-    // window.location.reload();
-    return null; // Return null to prevent the component from rendering while redirecting
+    window.location.reload();
+    // return null; // Return null to prevent the component from rendering while redirecting
   }
 
   return (
